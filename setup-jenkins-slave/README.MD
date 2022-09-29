@@ -21,6 +21,10 @@ yum install java-1.8*
 ```sh
 # Create user and add the user to wheel group
 useradd jenkins-slave-01
+
+# Use this for ubuntu otherwise user directory will not be created
+adduser jenkins-slave-01
+
 # Create SSH Keys
 sudo su - jenkins-slave-01
 ssh-keygen -t rsa -N "" -f /home/jenkins-slave-01/.ssh/id_rsa
